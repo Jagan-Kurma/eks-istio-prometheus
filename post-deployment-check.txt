@@ -1,0 +1,7 @@
+# Toupdate
+aws eks update-kubeconfig --region us-east-1 --name eks-istio-sidecar-prod
+
+# check the various namespaces Like Istio-System and monitoring
+kubectl get pods -n istio-system
+kubectl get svc -n istio-system
+kubectl get pods -n monitoring
