@@ -1,5 +1,5 @@
 # Alternate way to create a EKS cluster
-
+```
 resource "aws_eks_cluster" "this" {
   name     = var.cluster_name
   role_arn = aws_iam_role.eks_role.arn
@@ -25,3 +25,4 @@ resource "aws_eks_node_group" "default" {
     max_size     = 3
   }
 }
+```
