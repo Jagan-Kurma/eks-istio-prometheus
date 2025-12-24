@@ -5,3 +5,10 @@ aws eks update-kubeconfig --region us-east-1 --name eks-istio-sidecar-prod
 kubectl get pods -n istio-system
 kubectl get svc -n istio-system
 kubectl get pods -n monitoring
+
+# Verify IRSA
+kubectl describe sa istio-ingressgateway -n istio-system # Look for Annotations: eks.amazonaws.com/role-arn: arn:aws:iam::123456789:role/istio-ingress-irsa-role
+
+
+
+
